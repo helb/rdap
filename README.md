@@ -2,9 +2,9 @@
 
 JavaScript interface for the RDAP protocol.
 
-[![Build Status](https://travis-ci.org/helb/zonemaster-js.svg?branch=master)](https://travis-ci.org/helb/zonemaster-js)
-[![codecov](https://codecov.io/gh/helb/zonemaster-js/branch/master/graph/badge.svg)](https://codecov.io/gh/helb/zonemaster-js)
-[![npm version](https://badge.fury.io/js/zonemaster-js.svg)](https://badge.fury.io/js/zonemaster-js)
+[![Build Status](https://travis-ci.org/helb/rdap.svg?branch=master)](https://travis-ci.org/helb/rdap)
+[![codecov](https://codecov.io/gh/helb/rdap/branch/master/graph/badge.svg)](https://codecov.io/gh/helb/rdap)
+[![npm version](https://badge.fury.io/js/rdap.svg)](https://badge.fury.io/js/rdap)
 
 ## Installation & basic usage
 
