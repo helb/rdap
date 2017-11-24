@@ -1,0 +1,81 @@
+{
+  "name": "rdap",
+  "version": "0.0.1",
+  "description": "JS interface RDAP",
+  "license": "GPL-3.0",
+  "repository": "https://github.com/helb/rdap.git",
+  "main": "index.js",
+  "author": {
+    "email": "helb@helb.cz",
+    "url": "https://github.com/helb"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest",
+    "coverage": "npm test -- --coverage",
+    "postcoverage": "opn coverage/lcov-report/index.html",
+    "lint": "eslint src test",
+    "flow": "flow check",
+    "docs": "documentation readme src --section=API",
+    "clean": "rimraf dist",
+    "prebuild": "npm run docs && npm run clean",
+    "build": "babel src -d dist",
+    "watch": "npm-watch",
+    "patch": "npm version patch && npm publish",
+    "minor": "npm version minor && npm publish",
+    "major": "npm version major && npm publish",
+    "prepare": "npm run lint && npm test",
+    "prepublishOnly": "npm run build",
+    "postpublish": "git push origin master --follow-tags"
+  },
+  "watch": {
+    "test": "{src,test}/*.js",
+    "lint": "{src,test}/*.js",
+    "build": "src"
+  },
+  "jest": {
+    "testRegex": "/test/.*.test.js",
+    "testEnvironment": "node",
+    "automock": false,
+    "setupFiles": [
+      "./test-config.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "test-config.js",
+      "__mocks__"
+    ]
+  },
+  "keywords": [
+    "dns",
+    "zonemaster"
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "documentation": "^5.3.3",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "isomorphic-fetch": "^2.2.1",
+    "jest-cli": "^21.2.1",
+    "jest-fetch-mock": "^1.3.3",
+    "npm-watch": "^0.3.0",
+    "opn-cli": "^3.1.0",
+    "prettier": "^1.8.2",
+    "prettier-eslint": "^8.2.2",
+    "rimraf": "^2.6.2"
+  }
+}

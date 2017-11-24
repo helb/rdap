@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "jest": true,
+    "es6": true
+  },
+  "extends": "airbnb-base",
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "import/extensions": 0,
+    "max-len": ["error", {
+      "code": 100,
+      "ignoreComments": true
+    }],
+    "class-methods-use-this": 0
+  },
+  "globals": {
+    "fetch": false
+  }
+}
