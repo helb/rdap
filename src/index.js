@@ -1,3 +1,4 @@
+import r from './request';
 /**
  * Interface to the RDAP API.
  * @param backendUrl API URL, including protocol
@@ -11,4 +12,16 @@ export default class RDAP {
       backendUrl
     };
   }
+
+  async domain(name) {
+    return r(this.config.backendUrl, 'domain', name);
+  }
+
+  // async nameserver(name) {
+  //   return r(this.config.backendUrl, 'nameserver', name);
+  // }
+  //
+  // async entity(name) {
+  //   return r(this.config.backendUrl, 'entity', name);
+  // }
 }
